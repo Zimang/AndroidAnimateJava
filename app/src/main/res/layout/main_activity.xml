@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/hello_world"
+        android:contentDescription=""
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/DefaultStyle.Header"
+        android:textColor="@color/black"
+        android:background="@color/purple_200"
+        tools:text="@string/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <Button
+        android:id="@+id/startAnimatorButton"
+        app:layout_constraintTop_toBottomOf="@id/hello_world"
+        style="@style/DefaultStyle.DefaultMarginStyle"
+        android:text="@string/start_animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/cancelAnimatorButton"
+        app:layout_constraintTop_toBottomOf="@id/startAnimatorButton"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/DefaultStyle.DefaultMarginStyle"
+        android:text="@string/cancel_animator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/endAnimatorButton"
+        app:layout_constraintTop_toBottomOf="@id/cancelAnimatorButton"
+        style="@style/DefaultStyle.DefaultMarginStyle"
+        android:text="@string/end_animator"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
