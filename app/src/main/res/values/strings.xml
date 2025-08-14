@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Demo_java</string>
+    <string name="value_animator_target">valueAnimator 效果展示</string>
+    <string name="object_animator_target">objectAnimator 效果展示</string>
     <string name="start_animator">启动动效</string>
     <string name="cancel_animator">取消动效</string>
     <string name="end_animator">结束动效</string>

@@ -38,4 +38,8 @@ dependencies {
 
     implementation "androidx.constraintlayout:constraintlayout:2.2.1"
 
+//    lifecycle 依赖
+    implementation "androidx.lifecycle:lifecycle-runtime:2.6.0"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.6.0" // 支持 Java 8 的 DefaultLifecycleObserver
+
 }

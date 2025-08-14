@@ -15,7 +15,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final String ANIMATOR_TEXTVIEW_TEXT = "HELLO WORLD!";
 
     private ValueAnimator colorAnimator;
-    private TextView animatorTextView;
+    private TextView valueAnimatorTextView;
+    private TextView objectAnimatorTextView;
     private Button startAnimatorButton;
     private Button cancelAnimatorButton;
     private Button endAnimatorButton;
@@ -33,8 +34,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     private void initViews(){
-        animatorTextView =findViewById(R.id.hello_world);
-        animatorTextView.setText(ANIMATOR_TEXTVIEW_TEXT);
+        valueAnimatorTextView =findViewById(R.id.hello_world);
+        valueAnimatorTextView.setText(R.string.value_animator_target);
+        objectAnimatorTextView =findViewById(R.id.hello_world_2);
+        objectAnimatorTextView.setText(R.string.object_animator_target);
 
         startAnimatorButton=findViewById(R.id.startAnimatorButton);
         endAnimatorButton=findViewById(R.id.endAnimatorButton);
@@ -52,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         colorAnimator=ValueAnimator.ofArgb(Color.RED,Color.BLUE);
         colorAnimator.setDuration(duration);
         colorAnimator.addUpdateListener(animation -> {
-            animatorTextView.setTextColor((int) animation.getAnimatedValue());
+            valueAnimatorTextView.setTextColor((int) animation.getAnimatedValue());
         });
     }
 
